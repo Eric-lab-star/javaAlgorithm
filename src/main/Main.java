@@ -17,14 +17,22 @@ public class Main {
     System.out.print("c: ");
     int c = stdIn.nextInt();
 
-    int max = a;
-    if (b > max) {
-      max = b;
+    System.out.print("d: ");
+    int d = stdIn.nextInt();
+
+    int min = a;
+
+    if (b < min) {
+      min = b;
     }
-    if (c > max) {
-      max = c;
+    if (c < min) {
+      min = c;
     }
-    System.out.printf("greatest number is %d%n", max);
+
+    if (d < min) {
+      min = d;
+    }
+    System.out.printf("smallest number is %d%n", min);
     stdIn.close();
   }
 }
