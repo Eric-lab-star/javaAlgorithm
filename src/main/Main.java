@@ -24,14 +24,12 @@ public class Main {
         w = stdIn.nextInt();
       } while (w <= 0 || w > n);
 
-      for (int i = 0; i < n; i++) {
-        System.out.print("*");
-        if (i % w == w - 1) {
-          System.out.println();
-        }
+      for (int i = 0; i < n / w; i++) {
+        System.out.println("*".repeat(w));
       }
-      if (n % w != 0) {
-        System.out.println();
+      int modulo = n % w;
+      if (modulo != 0) {
+        System.out.println("*".repeat(modulo));
       }
     }
   }
